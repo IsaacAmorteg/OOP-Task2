@@ -18,17 +18,17 @@ namespace AnimalHierarchyLibrary
         {
             return "Bear";
         }
-        public override string GetAnimalName()
+        public override string GetName()
         {
             return _name;
         }
         public void Eat(Animal food)
         {
-            Console.WriteLine($"{GetSpeciesName()} is eating {food}.");
+            Console.WriteLine($"{GetSpeciesName()} is eating {food.GetName()}.");
         }
         public void Eat(Herbal food)
         {
-            Console.WriteLine($"{GetSpeciesName()} is eating {food}.");
+            Console.WriteLine($"{GetSpeciesName()} is eating {food.GetSpeciesName()}.");
         }
     }
     public interface IHerbivore

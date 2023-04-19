@@ -8,6 +8,6 @@ namespace AnimalHierarchyLibrary
 {
     public abstract class Animal : Alive
     {
-        public abstract string GetAnimalName();
+        public abstract string GetName();
     }
 }

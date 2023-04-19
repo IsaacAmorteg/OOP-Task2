@@ -20,14 +20,14 @@ namespace AnimalHierarchyLibrary
             return "Rabbit";
         }
 
-        public override string GetAnimalName()
+        public override string GetName()
         {
             return _name;
         }
 
         public override void Eat(Herbal food)
         {
-            Console.WriteLine($"{GetSpeciesName()} is eating {food}.");
+            Console.WriteLine($"{GetSpeciesName()} is eating {food.GetSpeciesName()}.");
         }
     }
 }
