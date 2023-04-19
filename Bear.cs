@@ -6,28 +6,37 @@ using System.Threading.Tasks;
 
 namespace AnimalHierarchyLibrary
 {
-    public class Rabbit : Herbivore
+    public class Bear : Animal, IHerbivore, ICarnivore
     {
         private string _name;
 
-        public Rabbit(string name) 
+        public Bear(string name)
         {
             _name = name;
         }
-
         public override string GetSpeciesName()
         {
-            return "Rabbit";
+            return "Bear";
         }
-
         public override string GetAnimalName()
         {
             return _name;
         }
-
-        public override void Eat(Herbal food)
+        public void Eat(Animal food)
         {
             Console.WriteLine($"{GetSpeciesName()} is eating {food}.");
         }
+        public void Eat(Herbal food)
+        {
+            Console.WriteLine($"{GetSpeciesName()} is eating {food}.");
+        }
+    }
+    public interface IHerbivore
+    {
+        void Eat(Herbal food);
+    }
+    public interface ICarnivore
+    {
+        void Eat(Animal food);
     }
 }

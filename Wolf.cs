@@ -14,5 +14,20 @@ namespace AnimalHierarchyLibrary
         {
             _name = name;
         }
+        public override string GetSpeciesName()
+        {
+            return "Wolf";
+        }
+
+        public override string GetAnimalName()
+        {
+            return _name;
+        }
+
+        public override void Eat(Animal food)
+        {
+            Console.WriteLine($"{GetSpeciesName()} is eating {food}.");
+        }
     }
+
 }
