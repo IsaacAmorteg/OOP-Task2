@@ -6,8 +6,13 @@ using System.Threading.Tasks;
 
 namespace AnimalHierarchyLibrary
 {
-    public abstract class Carnivore : Animal
+    public class Wolf : Carnivore
     {
-        public abstract void Eat(Animal food);
+        private string _name;
+
+        public Wolf(string name) 
+        {
+            _name = name;
+        }
     }
 }
